@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@font-face {
+  font-family: 'DigitalNumbers';
+  src: url('./assets/fonts/digital-numbers.ttf') format('truetype'),
+       url('./assets/fonts/digital-numbers.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
 	--primary-font-color: #484848;
@@ -77,10 +84,6 @@ body {
 	text-align: center;
 	overflow: hidden;
 	display: inline-block
-}
-
-header{
-	max-width: 1920px;
 }
 
 .navbar {
@@ -177,10 +180,6 @@ header{
 	top: 0;
 }
 
-.collection-section {
-	max-width: 1920px;
-}
-
 .collection {
 	gap: 35px;
 	max-width: 1281px;
@@ -243,25 +242,14 @@ header{
 	line-height: 100%;
 }
 
-.partners {
-	width: 100%;
-	overflow: hidden;
-}
-
 .logo-container {
-	animation: moveLogos 10s linear 2;
-	gap: 70px;
-	padding-block: 82px;
+  display: flex;
+  gap: 70px;
+  padding-block: 82px;
+  max-width: 1281px;
+  margin-inline: auto;
 }
 
-@keyframes moveLogos {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 
 @media (max-width:1240px) {
 	.collection {
@@ -331,10 +319,6 @@ header{
 .categories {
 	max-width: 1440px;
 	margin-inline: auto;
-}
-
-.categories {
-	max-width: 1920px;
 }
 
 .categories-content {
@@ -736,6 +720,144 @@ footer {
 		display: none;
 	}
 	.newsletter-image {
+		display: none;
+	}
+}
+
+.deals-of-the-month__content {
+	max-width: 1920px;
+	margin-inline: auto;
+	display: flex;
+	overflow: hidden;
+	justify-content: space-between;
+	gap: 40px;
+	padding: 30px;
+}
+
+.deals-of-the-month__info {
+	max-width: 453px;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.deals-of-the-month__text {
+	flex-direction: column;
+	gap: 20px;
+}
+
+.deals-of-the-month__text h3 {
+	color: var(--primary-font-color);
+	font-size: var(--primary-font-size);
+	font-weight: var(--font-size-regular);
+	font-weight: var(--font-weight);
+}
+
+.deals-of-the-month__text p {
+	color: var(--secodary-font-color);
+}
+
+.deals-of-the-month__text a {
+	text-decoration: none;
+	background-color: var(--btn-bg-color);
+	color: #fff;
+	padding: 20px 65px;
+	border-radius: 5px;
+	max-width: 207px;
+}
+
+.deals-of-the-month__countdown {
+	flex-direction: column;
+	gap: 15px;
+}
+
+.deals-of-the-month__countdown h4 {
+	font-size: 28px;
+	color: var(--secodary-font-color);
+}
+
+.deals-of-the-month__timer {
+	gap: 30px;
+	justify-content: space-around;
+}
+
+.deals-of-the-month__timer div {
+	font-family: 'DigitalNumbers', sans-serif;
+	font-size: 32px;
+	padding: 12px 22px;
+	border-radius: 5px;
+	box-shadow: 3px 3px gray;
+	background-color: #fff;
+	font-style: dotted;
+}
+
+.deals-of-the-month__time-units {
+	gap: 30px;
+	justify-content: space-around;
+	p {
+		font-size: 24px;
+		color: var(--primary-font-color);
+	}
+}
+
+/* .swiper {
+	width: 100%;
+	height: 100%;
+} */
+
+.main-slider {
+	gap: 24px;
+}
+
+.slide {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+  position: relative;
+  transition-property: transform;
+}
+
+.slide-one {
+	max-width: 404px;
+	max-height: 582px;
+}
+
+.slide-two, .slide-three {
+	max-width: 372px;
+}
+
+.swiper-slide img {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+}
+
+
+.swiper-pagination{
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background-color: #000;
+	bottom: 0;
+}
+
+@media (max-width:1440px) {
+	.deals-of-the-month__content {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media (max-width:992px) {
+	.main-slider {
+		display: none;
+	}
+
+	.deals-of-the-month__text  {
+		text-align: center;
+		align-items: center;
+	}
+
+	.deals-of-the-month__countdown  {
 		display: none;
 	}
 }
